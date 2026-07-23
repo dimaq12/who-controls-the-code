@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="ui-sans-serif, system-ui, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotsB1" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#e3e2db"/>
+    </pattern>
+    <marker id="arrGreyB1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="675" rx="24" fill="#fcfcfb"/>
+  <rect width="1200" height="675" rx="24" fill="url(#dotsB1)"/>
+  <rect x="1" y="1" width="1198" height="673" rx="23" fill="none" stroke="#0b0b0b" stroke-opacity="0.12" stroke-width="1.5"/>
+
+  <text x="48" y="66" fill="#898781" font-size="16" letter-spacing="3">FIG. 01 — THE MOST PLAUSIBLE CONTINUATION</text>
+
+  <!-- context that did not fit the window -->
+  <g font-size="19" fill="#6f6d67">
+    <g transform="rotate(-2 215 181)">
+      <rect x="60" y="150" width="310" height="62" rx="12" fill="#f7f6f3" stroke="#b5b3ab" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <text x="80" y="189">ADR-014 · layer boundaries</text>
+    </g>
+    <g transform="rotate(1.6 243 273)">
+      <rect x="88" y="242" width="310" height="62" rx="12" fill="#f7f6f3" stroke="#b5b3ab" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <text x="108" y="281">published wire schema</text>
+    </g>
+    <g transform="rotate(-1.2 219 365)">
+      <rect x="64" y="334" width="310" height="62" rx="12" fill="#f7f6f3" stroke="#b5b3ab" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <text x="84" y="373">developer's memory (offline)</text>
+    </g>
+  </g>
+  <text x="64" y="462" fill="#6f6d67" font-size="18" font-style="italic">outside the window —</text>
+  <text x="64" y="488" fill="#6f6d67" font-size="18" font-style="italic">must be reinvented</text>
+
+  <!-- context window -->
+  <text x="575" y="124" fill="#6f6d67" font-size="15" letter-spacing="2" text-anchor="middle">CONTEXT WINDOW</text>
+  <rect x="430" y="138" width="290" height="380" rx="16" fill="#f2f6fc" stroke="#2a78d6" stroke-width="2"/>
+  <g>
+    <rect x="452" y="162" width="246" height="60" rx="10" fill="#f4f3f0" stroke="#d0cec6"/>
+    <rect x="452" y="162" width="5" height="60" rx="2.5" fill="#2a78d6"/>
+    <text x="472" y="200" fill="#1a1a19" font-size="18">task description</text>
+
+    <rect x="452" y="240" width="246" height="60" rx="10" fill="#f4f3f0" stroke="#d0cec6"/>
+    <rect x="452" y="240" width="5" height="60" rx="2.5" fill="#2a78d6"/>
+    <text x="472" y="278" fill="#1a1a19" font-size="16.5" font-family="ui-monospace, Menlo, Consolas, monospace">StartCaptureRoute.kt</text>
+
+    <rect x="452" y="318" width="246" height="60" rx="10" fill="#f4f3f0" stroke="#d0cec6"/>
+    <rect x="452" y="318" width="5" height="60" rx="2.5" fill="#2a78d6"/>
+    <text x="472" y="356" fill="#1a1a19" font-size="16.5" font-family="ui-monospace, Menlo, Consolas, monospace">CaptureProducer.kt</text>
+
+    <rect x="452" y="396" width="246" height="60" rx="10" fill="#f4f3f0" stroke="#d0cec6"/>
+    <rect x="452" y="396" width="5" height="60" rx="2.5" fill="#2a78d6"/>
+    <text x="472" y="434" fill="#1a1a19" font-size="18">+ 3 more files</text>
+  </g>
+  <text x="575" y="550" fill="#6f6d67" font-size="17" text-anchor="middle" font-style="italic">what fits, goes in</text>
+
+  <!-- arrow -->
+  <line x1="732" y1="330" x2="782" y2="330" stroke="#52514e" stroke-width="2" marker-end="url(#arrGreyB1)"/>
+  <text x="757" y="312" fill="#6f6d67" font-size="15" text-anchor="middle">generate</text>
+
+  <!-- generated code -->
+  <rect x="794" y="112" width="358" height="470" rx="14" fill="#f6f5f2" stroke="#d0cec6" stroke-width="1.5"/>
+  <text x="818" y="148" fill="#6f6d67" font-size="16" font-family="ui-monospace, Menlo, Consolas, monospace">StartCaptureListener.kt</text>
+  <line x1="795" y1="166" x2="1151" y2="166" stroke="#dddbd3" stroke-width="1.5"/>
+
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="18.5" fill="#52514e">
+    <text x="818" y="214">fun handle(cmd) {</text>
+    <text x="818" y="254">&#160;&#160;validate(cmd)</text>
+    <text x="818" y="294">&#160;&#160;provider.call(cmd)</text>
+    <rect x="806" y="308" width="334" height="38" rx="8" fill="#eb6834" fill-opacity="0.14" stroke="#eb6834" stroke-opacity="0.85" stroke-width="1.5"/>
+    <text x="818" y="334" fill="#b34a17">&#160;&#160;retry(3) { call(cmd) }</text>
+    <text x="818" y="374">&#160;&#160;emit(Started(res.id))</text>
+    <text x="818" y="414">}</text>
+  </g>
+
+  <rect x="806" y="452" width="4" height="58" fill="#eb6834" fill-opacity="0.85"/>
+  <text x="824" y="474" fill="#b34a17" font-size="17.5">plausible — and never licensed:</text>
+  <text x="824" y="500" fill="#b34a17" font-size="17.5">the operation is not idempotent</text>
+
+  <text x="48" y="638" fill="#52514e" font-size="20">Everything missing from the window is filled in the way the model was trained to: plausibly.</text>
+</svg>

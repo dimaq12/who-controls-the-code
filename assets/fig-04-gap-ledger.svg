@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="ui-sans-serif, system-ui, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dots4" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#222220"/>
+    </pattern>
+    <pattern id="hatch4" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#3987e5" stroke-opacity="0.16" stroke-width="1.4"/>
+    </pattern>
+    <filter id="glow4" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <marker id="arrGrey4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c3c2b7"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="560" rx="20" fill="#161615"/>
+  <rect width="1200" height="560" rx="20" fill="url(#dots4)"/>
+  <rect x="0.5" y="0.5" width="1199" height="559" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <text x="48" y="58" fill="#898781" font-size="13" letter-spacing="3">FIG. 04 — HONESTY OVER COMPLETENESS</text>
+
+  <!-- left: the stop protocol -->
+  <text x="60" y="100" fill="#898781" font-size="12" letter-spacing="2">WHEN CONTRACTS RUN OUT: STOP, RECORD, CITE</text>
+
+  <rect x="60" y="118" width="330" height="172" rx="12" fill="#141a26"/>
+  <rect x="60" y="118" width="330" height="172" rx="12" fill="url(#hatch4)"/>
+  <rect x="60" y="118" width="330" height="172" rx="12" fill="none" stroke="#3987e5" stroke-opacity="0.5"/>
+  <text x="78" y="144" fill="#7fb2ef" font-size="13">covered by contracts</text>
+
+  <rect x="404" y="118" width="150" height="172" rx="12" fill="#191918" stroke="#4a4a46" stroke-dasharray="6 5"/>
+  <text x="479" y="144" fill="#898781" font-size="13" text-anchor="middle">not covered</text>
+
+  <line x1="397" y1="112" x2="397" y2="296" stroke="#c98500" stroke-width="1.6" stroke-dasharray="7 5"/>
+
+  <!-- agent path stopping at the boundary -->
+  <path d="M 84 252 C 140 236, 170 214, 214 226 S 320 232, 378 212" fill="none" stroke="#c3c2b7" stroke-width="1.8"/>
+  <circle cx="386" cy="210" r="9" fill="#c98500" fill-opacity="0.4" filter="url(#glow4)"/>
+  <circle cx="386" cy="210" r="5" fill="#c98500"/>
+  <rect x="358" y="164" width="56" height="24" rx="6" fill="#c98500" fill-opacity="0.15" stroke="#c98500"/>
+  <text x="386" y="180" fill="#e6b355" font-size="11.5" letter-spacing="1.5" text-anchor="middle">STOP</text>
+
+  <path d="M 386 226 L 386 300" fill="none" stroke="#c3c2b7" stroke-width="1.5" marker-end="url(#arrGrey4)"/>
+
+  <!-- ledger -->
+  <rect x="230" y="306" width="310" height="106" rx="10" fill="#1f1f1e" stroke="#3a3a37"/>
+  <text x="248" y="333" fill="#eceae4" font-size="13.5">gap ledger</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#c3c2b7">
+    <text x="248" y="358">GAP-017: contracts don't cover</text>
+    <text x="248" y="376">the error-path helper</text>
+  </g>
+  <text x="248" y="398" fill="#898781" font-size="12">conservative reading · source cited</text>
+
+  <rect x="230" y="428" width="310" height="32" rx="8" fill="#191918" stroke="#4a4a46"/>
+  <text x="248" y="449" fill="#a3a29b" font-size="12.5" font-family="ui-monospace, Menlo, Consolas, monospace">// TEMPLATE-GAP: inlined here</text>
+
+  <line x1="597" y1="90" x2="597" y2="480" stroke="#2c2c2a"/>
+
+  <!-- right: three bins -->
+  <text x="640" y="100" fill="#898781" font-size="12" letter-spacing="2">AFTER THE ADVERSARIAL DIFF, EVERY DIVERGENCE LANDS IN ONE BIN</text>
+
+  <rect x="805" y="118" width="170" height="34" rx="17" fill="#1f1f1e" stroke="#6b6a66"/>
+  <text x="890" y="140" fill="#eceae4" font-size="13.5" text-anchor="middle">adversarial diff</text>
+
+  <!-- falling divergences -->
+  <g>
+    <rect x="822" y="176" width="11" height="11" rx="2" transform="rotate(45 827.5 181.5)" fill="#6b6a66"/>
+    <rect x="766" y="212" width="11" height="11" rx="2" transform="rotate(45 771.5 217.5)" fill="#3987e5"/>
+    <rect x="722" y="252" width="11" height="11" rx="2" transform="rotate(45 727.5 257.5)" fill="#3987e5"/>
+    <rect x="886" y="188" width="11" height="11" rx="2" transform="rotate(45 891.5 193.5)" fill="#6b6a66"/>
+    <rect x="892" y="240" width="11" height="11" rx="2" transform="rotate(45 897.5 245.5)" fill="#199e70"/>
+    <rect x="948" y="180" width="11" height="11" rx="2" transform="rotate(45 953.5 185.5)" fill="#6b6a66"/>
+    <rect x="1008" y="216" width="11" height="11" rx="2" transform="rotate(45 1013.5 221.5)" fill="#e66767"/>
+    <rect x="1052" y="254" width="11" height="11" rx="2" transform="rotate(45 1057.5 259.5)" fill="#e66767"/>
+  </g>
+
+  <!-- bins -->
+  <g stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M 655 300 L 655 380 L 795 380 L 795 300" stroke="#3987e5"/>
+    <path d="M 830 300 L 830 380 L 970 380 L 970 300" stroke="#199e70"/>
+    <path d="M 1005 300 L 1005 380 L 1145 380 L 1145 300" stroke="#e66767" filter="url(#glow4)"/>
+    <path d="M 1005 300 L 1005 380 L 1145 380 L 1145 300" stroke="#e66767"/>
+  </g>
+  <g>
+    <rect x="700" y="356" width="11" height="11" rx="2" transform="rotate(45 705.5 361.5)" fill="#3987e5"/>
+    <rect x="730" y="360" width="11" height="11" rx="2" transform="rotate(45 735.5 365.5)" fill="#3987e5"/>
+    <rect x="890" y="358" width="11" height="11" rx="2" transform="rotate(45 895.5 363.5)" fill="#199e70"/>
+    <rect x="1062" y="356" width="11" height="11" rx="2" transform="rotate(45 1067.5 361.5)" fill="#e66767"/>
+    <rect x="1092" y="360" width="11" height="11" rx="2" transform="rotate(45 1097.5 365.5)" fill="#e66767"/>
+  </g>
+
+  <g text-anchor="middle">
+    <text x="725" y="414" fill="#7fb2ef" font-size="14">predicted</text>
+    <text x="725" y="434" fill="#898781" font-size="12">declared up front</text>
+    <text x="900" y="414" fill="#4cc596" font-size="14">catalogued</text>
+    <text x="900" y="434" fill="#898781" font-size="12">ledger entry GAP-017</text>
+    <text x="1075" y="414" fill="#e66767" font-size="14">candidate defect</text>
+    <text x="1075" y="434" fill="#898781" font-size="12">a work item with an address</text>
+  </g>
+
+  <text x="48" y="522" fill="#c3c2b7" font-size="15">Boring, almost bureaucratic — and it turns “the AI generated something weird” into a work item with an address.</text>
+</svg>

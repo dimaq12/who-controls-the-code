@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="ui-sans-serif, system-ui, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dots3" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#222220"/>
+    </pattern>
+    <filter id="soft3" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <marker id="arrBlue3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3987e5"/>
+    </marker>
+    <marker id="arrGrey3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#898781"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="560" rx="20" fill="#161615"/>
+  <rect width="1200" height="560" rx="20" fill="url(#dots3)"/>
+  <rect x="0.5" y="0.5" width="1199" height="559" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <text x="48" y="58" fill="#898781" font-size="13" letter-spacing="3">FIG. 03 — CONTRACT BEFORE CODE</text>
+
+  <!-- contract block -->
+  <rect x="370" y="94" width="460" height="170" rx="14" fill="#3987e5" fill-opacity="0.25" filter="url(#soft3)"/>
+  <rect x="370" y="94" width="460" height="170" rx="12" fill="#141a26" stroke="#3987e5" stroke-width="1.5"/>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13.5" fill="#b9d0f0" xml:space="preserve">
+    <text x="396" y="126" fill="#e2edfb">//@contract: StartCaptureRoute.handle</text>
+    <text x="396" y="150">//@&#160;&#160;pre: command.value &gt; 0</text>
+    <text x="396" y="174">//@&#160;&#160;post: result.captureId == command.id</text>
+    <text x="396" y="198">//@&#160;&#160;calls: [telemetryApi.start]</text>
+    <text x="396" y="222">//@&#160;&#160;raises: PermanentException</text>
+    <text x="396" y="246">//@&#160;&#160;assigns: []</text>
+  </g>
+  <rect x="502" y="82" width="196" height="24" rx="12" fill="#161615" stroke="#3987e5"/>
+  <text x="600" y="98" fill="#7fb2ef" font-size="12" letter-spacing="1" text-anchor="middle">single source of truth</text>
+
+  <!-- two independent realizations -->
+  <path d="M 480 266 C 480 312, 335 300, 335 336" fill="none" stroke="#3987e5" stroke-width="1.8" marker-end="url(#arrBlue3)"/>
+  <path d="M 720 266 C 720 312, 865 300, 865 336" fill="none" stroke="#3987e5" stroke-width="1.8" marker-end="url(#arrBlue3)"/>
+  <text x="368" y="308" fill="#898781" font-size="12.5" text-anchor="end">generates</text>
+  <text x="832" y="308" fill="#898781" font-size="12.5">asserts</text>
+
+  <rect x="225" y="340" width="220" height="60" rx="10" fill="#1f1f1e" stroke="#6b6a66"/>
+  <text x="335" y="376" fill="#eceae4" font-size="15" text-anchor="middle">implementation</text>
+
+  <rect x="755" y="340" width="220" height="60" rx="10" fill="#1f1f1e" stroke="#199e70"/>
+  <text x="865" y="376" fill="#7fd0ab" font-size="15" text-anchor="middle">tests</text>
+
+  <line x1="455" y1="370" x2="745" y2="370" stroke="#898781" stroke-width="1.4" stroke-dasharray="5 5" marker-start="url(#arrGrey3)" marker-end="url(#arrGrey3)"/>
+  <text x="600" y="360" fill="#898781" font-size="13" text-anchor="middle">must agree — derived independently</text>
+
+  <text x="600" y="446" fill="#c3c2b7" font-size="15" text-anchor="middle">For a bug to slip through, two mistakes must now happen — in different directions, and in agreement.</text>
+
+  <!-- the old loop, retired -->
+  <g opacity="0.75">
+    <rect x="78" y="486" width="64" height="32" rx="8" fill="#191918" stroke="#4a4a46"/>
+    <text x="110" y="507" fill="#898781" font-size="12.5" text-anchor="middle">code</text>
+    <rect x="196" y="486" width="64" height="32" rx="8" fill="#191918" stroke="#4a4a46"/>
+    <text x="228" y="507" fill="#898781" font-size="12.5" text-anchor="middle">test</text>
+    <path d="M 144 492 C 158 482, 180 482, 194 492" fill="none" stroke="#4a4a46" stroke-width="1.4" marker-end="url(#arrGrey3)"/>
+    <path d="M 194 512 C 180 522, 158 522, 144 512" fill="none" stroke="#4a4a46" stroke-width="1.4" marker-end="url(#arrGrey3)"/>
+    <line x1="94" y1="528" x2="244" y2="478" stroke="#e66767" stroke-width="2"/>
+    <text x="282" y="508" fill="#898781" font-size="12.5">the old loop: the examiner studied under the examinee</text>
+  </g>
+</svg>

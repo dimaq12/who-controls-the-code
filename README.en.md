@@ -86,6 +86,10 @@ For text, that is a useful property.
 
 For the architecture of a payment system — not always.
 
+![Whatever doesn't fit the context window, the model fills in](assets/fig-01-plausible-continuation.svg)
+
+*Fig. 1 — Whatever doesn't fit the context window, the model fills in — plausibly.*
+
 ## Plausibility is not provenance
 
 Imagine the agent added a retry to a handler.
@@ -126,6 +130,10 @@ The chat history will sometimes show what the agent was asked.
 
 But neither will prove which rule licensed the existence of a given line, which contract it
 realizes, and which check confirms it is correct.
+
+![Plausibility is not provenance](assets/fig-02-plausibility-vs-provenance.svg)
+
+*Fig. 2 — Git shows what changed. A provenance chain answers why.*
 
 ## The black box finally works
 
@@ -224,6 +232,10 @@ there is your failure scenario, and it is mandatory, not optional. Code and test
 independent realizations of a single source of truth. For a bug to slip through now, two
 mistakes must happen — in different directions, and in agreement with each other.
 
+![Contract before code](assets/fig-03-contract-before-code.svg)
+
+*Fig. 3 — Code and tests: two independent realizations of a single source of truth.*
+
 ## Honesty over completeness
 
 The hardest part of this scheme is not teaching the agent to follow contracts. The hardest part
@@ -250,6 +262,10 @@ reference, every difference lands in exactly one of three bins: *predicted* (we 
 deviation up front), *catalogued* (here is the ledger entry), or *candidate defect* (here are
 the contracts that should have covered it — and didn't). That third bin is no longer "the AI
 generated something weird." It is a work item with an address.
+
+![Honesty over completeness](assets/fig-04-gap-ledger.svg)
+
+*Fig. 4 — The stop protocol and the three bins: every divergence gets an address.*
 
 We ran this discipline through six full battle runs: a fresh agent session, a family of several
 hundred files, the whole thing rebuilt from contracts alone, then an adversarial diff. The
@@ -285,6 +301,10 @@ knows nothing about — and such code has a name: drift. The `lynx_drift` tool l
 methods without contracts, contracts nothing realizes, markers nothing explains. Not "something
 diverged somewhere," but item by item, with addresses.
 
+![Asking the system why](assets/fig-05-provenance-graph.svg)
+
+*Fig. 5 — The answer of `lynx_why` is a path through the graph, not the model reasoning aloud. Everything off the paths is drift.*
+
 And because the database is deterministic — identical inputs produce a byte-identical index,
 with not a single timestamp inside — every state can be kept as a snapshot and compared
 **architecturally**, not line by line. The answer to "what changed this week" stops being "600
@@ -309,6 +329,10 @@ The usual scheme gets inverted. Not "the agent acts, the human catches up and re
 "the agent proposes something provable, the human decides." Control comes back not by
 forbidding the machine, but by a construction in which the machine simply has no way to change
 the system silently.
+
+![Exactly one write path](assets/fig-06-single-write-path.svg)
+
+*Fig. 6 — The single write path: the agent proposes something provable; the human decides.*
 
 ## The machine types by itself. Now you can ask it why
 
